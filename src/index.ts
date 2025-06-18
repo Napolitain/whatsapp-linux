@@ -15,7 +15,7 @@ function createWindow() {
             nodeIntegration: false,
             contextIsolation: true
         },
-        icon: path.join(__dirname, '../assets/icon.png')
+        icon: path.join(__dirname, '../assets/03_PNG/Green/Digital_Glyph_Green.png')
     });
 
     mainWindow.loadURL('https://web.whatsapp.com', {
@@ -26,23 +26,12 @@ function createWindow() {
         e.preventDefault();
         mainWindow?.hide();
     });
-
-
-    console.log('Electron version:', process.versions.electron);
-    console.log('Chromium version:', process.versions.chrome);
-    console.log('Node.js version:', process.versions.node);
-
-
-    mainWindow.webContents.once('did-finish-load', () => {
-        const userAgent = mainWindow!.webContents.getUserAgent();
-        console.log('User-Agent:', userAgent);
-    });
 }
 
 app.whenReady().then(() => {
     createWindow();
 
-    tray = new Tray(nativeImage.createFromPath(path.join(__dirname, '../assets/icon.png')));
+    tray = new Tray(nativeImage.createFromPath(path.join(__dirname, '../assets/03_PNG/Green/Digital_Glyph_Green.png')));
     const menu = Menu.buildFromTemplate([
         {label: 'Show', click: () => mainWindow?.show()},
         {label: 'Quit', click: () => app.quit()}

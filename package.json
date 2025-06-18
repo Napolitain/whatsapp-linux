@@ -12,5 +12,28 @@
     "electron": "^36.4.0",
     "typescript": "^5.8.3"
   },
-  "private": true
+  "private": true,
+  "build": {
+    "appId": "com.napolitain.whatsapp",
+    "productName": "WhatsApp",
+    "files": [
+      "dist/**/*",
+      "preload.js",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage",
+        "flatpak"
+      ],
+      "category": "Network",
+      "icon": "assets/03_PNG/Green/Digital_Glyph_Green.png",
+      "maintainer": "Maxime Boucher <mxboucher@gmail.com>",
+      "desktop": {
+        "StartupWMClass": "WhatsApp"
+      }
+    }
+  }
 }
