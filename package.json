@@ -1,7 +1,8 @@
 {
   "name": "whatsapp-linux",
   "version": "1.0.0",
-  "description": "",
+  "description": "Unofficial WhatsApp client for Linux",
+  "author": "Maxime Boucher <mxboucher@gmail.com>",
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc && electron .",
@@ -33,10 +34,7 @@
       ],
       "category": "Network",
       "icon": "assets/03_PNG/Green/Digital_Glyph_Green.png",
-      "maintainer": "Maxime Boucher <mxboucher@gmail.com>",
-      "desktop": {
-        "StartupWMClass": "WhatsApp"
-      }
+      "maintainer": "Maxime Boucher <mxboucher@gmail.com>"
     }
   }
 }
