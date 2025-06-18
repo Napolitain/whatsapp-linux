@@ -6,7 +6,9 @@
   "scripts": {
     "start": "tsc && electron .",
     "start-dev": "tsc && electron --no-sandbox .",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "build:ts": "tsc",
+    "build:electron": "electron-builder"
   },
   "devDependencies": {
     "electron": "^36.4.0",

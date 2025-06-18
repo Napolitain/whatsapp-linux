@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: 🧾 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v3
@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: 🛠️ Build TypeScript
-        run: npm run build
+        run: npm run build:ts
 
       - name: 📤 Upload artifacts
         uses: actions/upload-artifact@v4
@@ -42,8 +42,7 @@ jobs:
           # e.g., use GPG signing if publishing releases
 
       - name: 🚀 Electron Builder (build .deb, .AppImage)
-        run: |
-          npm run build
+        run: npm run build:electron
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -53,4 +52,3 @@ jobs:
           files: dist/*.*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
