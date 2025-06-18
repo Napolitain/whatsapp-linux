@@ -29,8 +29,7 @@
     "linux": {
       "target": [
         "deb",
-        "AppImage",
-        "flatpak"
+        "AppImage"
       ],
       "category": "Network",
       "icon": "assets/03_PNG/Green/Digital_Glyph_Green.png",
