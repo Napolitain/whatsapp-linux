@@ -41,6 +41,9 @@ jobs:
           echo "AppImage signing step (skipped for now)"
           # e.g., use GPG signing if publishing releases
 
+      - name: Install flatpak
+        run: sudo apt-get update && sudo apt-get install -y flatpak
+
       - name: 🚀 Electron Builder (build .deb, .AppImage)
         run: npm run build:electron
         env:
