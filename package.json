@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-linux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && electron .",
+    "start-dev": "tsc && electron --no-sandbox .",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "typescript": "^5.8.3"
+  },
+  "private": true
+}
